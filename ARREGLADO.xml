@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0983c16c-d806-4d1b-8d01-77f5a157733d" activeEnvironment="Default" name="10.9.220.51_8443_SPIOL_TEST" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6e398561-a8d4-42e8-9f7e-315e9f5249ad" wsaVersion="NONE" name="WsTransaccionOnlineEmisorSoapBinding" type="wsdl" bindingName="{http://objetos/wsTransaccionOnlineEmisor}WsTransaccionOnlineEmisorSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint></con:endpoints><con:operation id="948e86eb-f5bd-4cb6-b65b-526f069d9022" isOneWay="false" action="" name="consultaTransaccion" bindingOperationName="consultaTransaccion" type="Request-Response" outputName="consultaTransaccionResponse" inputName="consultaTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7418718b-46ac-4bfc-94bd-29196703ad5a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wst:consultaTransaccion>\r
+         <codigoInstitucionUsuario>?</codigoInstitucionUsuario>\r
+         <usuario>?</usuario>\r
+         <password>?</password>\r
+         <bancoEmisor>?</bancoEmisor>\r
+         <fechaEmision>?</fechaEmision>\r
+         <referencia>?</referencia>\r
+      </wst:consultaTransaccion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/consultaTransaccion"/></con:call></con:operation><con:operation id="de959afd-56d3-4fed-a7f7-e304515bf627" isOneWay="false" action="" name="ingresoTransaccion" bindingOperationName="ingresoTransaccion" type="Request-Response" outputName="ingresoTransaccionResponse" inputName="ingresoTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="96b060c1-d500-479a-b313-1a26b17d2b15" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wst:ingresoTransaccion>\r
+         <codigoInstitucionUsuario>?</codigoInstitucionUsuario>\r
+         <usuario>?</usuario>\r
+         <password>?</password>\r
+         <transacOnline>\r
+            <!--Optional:-->\r
+            <idTransacBanco>?</idTransacBanco>\r
+            <tipo>?</tipo>\r
+            <bancoEmisor>?</bancoEmisor>\r
+            <bancoReceptor>?</bancoReceptor>\r
+            <referencia>?</referencia>\r
+            <moneda>?</moneda>\r
+            <importe>?</importe>\r
+            <codigoConcepto>?</codigoConcepto>\r
+            <cuentaOrigen>?</cuentaOrigen>\r
+            <nombreOrigen>?</nombreOrigen>\r
+            <!--Optional:-->\r
+            <direccionOrigen>?</direccionOrigen>\r
+            <cuentaDestino>?</cuentaDestino>\r
+            <nombreDestino>?</nombreDestino>\r
+            <!--Optional:-->\r
+            <direccionDestino>?</direccionDestino>\r
+            <!--Optional:-->\r
+            <fechaCierreDebito>?</fechaCierreDebito>\r
+            <!--Optional:-->\r
+            <observaciones>?</observaciones>\r
+            <!--Optional:-->\r
+            <mur>?</mur>\r
+            <!--Optional:-->\r
+            <idServicioDebito>?</idServicioDebito>\r
+            <!--Optional:-->\r
+            <ordenanteDebito>?</ordenanteDebito>\r
+            <fechaEmision>?</fechaEmision>\r
+            <infoAdicional>\r
+               <!--Zero or more repetitions:-->\r
+               <entry>\r
+                  <!--Optional:-->\r
+                  <key>?</key>\r
+                  <!--Optional:-->\r
+                  <value>?</value>\r
+               </entry>\r
+            </infoAdicional>\r
+         </transacOnline>\r
+      </wst:ingresoTransaccion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/ingresoTransaccion"/></con:call></con:operation><con:operation id="c2e9b91c-29b0-4301-863a-fac0a5b9782e" isOneWay="false" action="" name="reversaTransaccion" bindingOperationName="reversaTransaccion" type="Request-Response" outputName="reversaTransaccionResponse" inputName="reversaTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e9dbad2e-265e-46fc-92d9-dd76bf407710" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wst:reversaTransaccion>\r
+         <codigoInstitucionUsuario>?</codigoInstitucionUsuario>\r
+         <usuario>?</usuario>\r
+         <password>?</password>\r
+         <transacOnline>\r
+            <!--Optional:-->\r
+            <idTransacBanco>?</idTransacBanco>\r
+            <tipo>?</tipo>\r
+            <bancoEmisor>?</bancoEmisor>\r
+            <bancoReceptor>?</bancoReceptor>\r
+            <referencia>?</referencia>\r
+            <moneda>?</moneda>\r
+            <importe>?</importe>\r
+            <codigoConcepto>?</codigoConcepto>\r
+            <cuentaOrigen>?</cuentaOrigen>\r
+            <nombreOrigen>?</nombreOrigen>\r
+            <!--Optional:-->\r
+            <direccionOrigen>?</direccionOrigen>\r
+            <cuentaDestino>?</cuentaDestino>\r
+            <nombreDestino>?</nombreDestino>\r
+            <!--Optional:-->\r
+            <direccionDestino>?</direccionDestino>\r
+            <!--Optional:-->\r
+            <fechaCierreDebito>?</fechaCierreDebito>\r
+            <!--Optional:-->\r
+            <observaciones>?</observaciones>\r
+            <!--Optional:-->\r
+            <mur>?</mur>\r
+            <!--Optional:-->\r
+            <idServicioDebito>?</idServicioDebito>\r
+            <!--Optional:-->\r
+            <ordenanteDebito>?</ordenanteDebito>\r
+            <fechaEmision>?</fechaEmision>\r
+            <infoAdicional>\r
+               <!--Zero or more repetitions:-->\r
+               <entry>\r
+                  <!--Optional:-->\r
+                  <key>?</key>\r
+                  <!--Optional:-->\r
+                  <value>?</value>\r
+               </entry>\r
+            </infoAdicional>\r
+         </transacOnline>\r
+      </wst:reversaTransaccion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/reversaTransaccion"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="66fbd3fe-5294-4430-b21f-493f895dd010" wsaVersion="NONE" name="WsTransaccionOnlineEmisorImplServiceSoapBinding" type="wsdl" bindingName="{http://objetos/wsTransaccionOnlineEmisor}WsTransaccionOnlineEmisorImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?wsdl"><con:part><con:url>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WsTransaccionOnlineEmisorImplService" targetNamespace="http://objetos/wsTransaccionOnlineEmisor" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://objetos/wsTransaccionOnlineEmisor" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://objetos/wsTransaccionOnlineEmisor" schemaLocation="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?xsd=wsTransaccionOnLineEmisor_schema1.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="ingresoTransaccionResponse">
+    <wsdl:part element="tns:ingresoTransaccionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaTransaccion">
+    <wsdl:part element="tns:consultaTransaccion" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaTransaccionResponse">
+    <wsdl:part element="tns:consultaTransaccionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reversaTransaccion">
+    <wsdl:part element="tns:reversaTransaccion" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reversaTransaccionResponse">
+    <wsdl:part element="tns:reversaTransaccionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ingresoTransaccion">
+    <wsdl:part element="tns:ingresoTransaccion" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WsTransaccionOnlineEmisor">
+    <wsdl:operation name="consultaTransaccion">
+      <wsdl:input message="tns:consultaTransaccion" name="consultaTransaccion"></wsdl:input>
+      <wsdl:output message="tns:consultaTransaccionResponse" name="consultaTransaccionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresoTransaccion">
+      <wsdl:input message="tns:ingresoTransaccion" name="ingresoTransaccion"></wsdl:input>
+      <wsdl:output message="tns:ingresoTransaccionResponse" name="ingresoTransaccionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reversaTransaccion">
+      <wsdl:input message="tns:reversaTransaccion" name="reversaTransaccion"></wsdl:input>
+      <wsdl:output message="tns:reversaTransaccionResponse" name="reversaTransaccionResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsTransaccionOnlineEmisorSoapBinding" type="tns:WsTransaccionOnlineEmisor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultaTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultaTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresoTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ingresoTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ingresoTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reversaTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reversaTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reversaTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsTransaccionOnlineEmisorImplServiceSoapBinding" type="tns:WsTransaccionOnlineEmisor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#policyBinding"/>
+    <wsdl:operation name="consultaTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultaTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresoTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ingresoTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ingresoTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reversaTransaccion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reversaTransaccion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reversaTransaccionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsTransaccionOnlineEmisorImplService">
+    <wsdl:port binding="tns:WsTransaccionOnlineEmisorImplServiceSoapBinding" name="WsTransaccionOnlineEmisorPort">
+      <soap:address location="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="WsTransaccionOnlineEmisorService">
+    <wsdl:port binding="tns:WsTransaccionOnlineEmisorSoapBinding" name="WsTransaccionOnlineEmisorPort">
+      <soap:address location="https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsp:Policy wsu:Id="policyBinding">
+    <sp:AsymmetricBinding>
+      <wsp:Policy>
+        <sp:InitiatorToken>
+          <wsp:Policy>
+            <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Always">
+              <wsp:Policy>
+                <sp:WssX509V3Token10/>
+              </wsp:Policy>
+            </sp:X509Token>
+          </wsp:Policy>
+        </sp:InitiatorToken>
+        <sp:RecipientToken>
+          <wsp:Policy>
+            <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Always">
+              <wsp:Policy>
+                <sp:WssX509V3Token10/>
+              </wsp:Policy>
+            </sp:X509Token>
+          </wsp:Policy>
+        </sp:RecipientToken>
+        <sp:Layout>
+          <wsp:Policy>
+            <sp:Strict/>
+          </wsp:Policy>
+        </sp:Layout>
+        <sp:OnlySignEntireHeadersAndBody/>
+        <sp:AlgorithmSuite>
+          <wsp:Policy>
+            <sp:Basic256Sha256/>
+          </wsp:Policy>
+        </sp:AlgorithmSuite>
+      </wsp:Policy>
+    </sp:AsymmetricBinding>
+    <sp:SignedParts>
+      <sp:Body/>
+    </sp:SignedParts>
+  </wsp:Policy>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort?xsd=wsTransaccionOnLineEmisor_schema1.xsd</con:url><con:content><![CDATA[<xs:schema elementFormDefault="unqualified" targetNamespace="http://objetos/wsTransaccionOnlineEmisor" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://objetos/wsTransaccionOnlineEmisor">
+  <xs:element name="consultaTransaccion" type="tns:consultaTransaccion"/>
+  <xs:element name="consultaTransaccionResponse" type="tns:consultaTransaccionResponse"/>
+  <xs:element name="ingresoTransaccion" type="tns:ingresoTransaccion"/>
+  <xs:element name="ingresoTransaccionResponse" type="tns:ingresoTransaccionResponse"/>
+  <xs:element name="respuestaConsultaTransaccion" type="tns:respuestaConsultaTransaccionType"/>
+  <xs:element name="respuestaIngresoTransaccion" type="tns:respuestaIngresoTransaccionType"/>
+  <xs:element name="respuestaReversaTransaccion" type="tns:respuestaReversaTransaccionType"/>
+  <xs:element name="reversaTransaccion" type="tns:reversaTransaccion"/>
+  <xs:element name="reversaTransaccionResponse" type="tns:reversaTransaccionResponse"/>
+  <xs:element name="wsTransaccionOnline" type="tns:wsTransaccionOnlineType"/>
+  <xs:complexType name="consultaTransaccion">
+    <xs:sequence>
+      <xs:element name="codigoInstitucionUsuario" type="xs:string"/>
+      <xs:element name="usuario" type="xs:string"/>
+      <xs:element name="password" type="xs:string"/>
+      <xs:element name="bancoEmisor" type="xs:string"/>
+      <xs:element name="fechaEmision" type="xs:string"/>
+      <xs:element name="referencia" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaTransaccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respuestaConsultaTransaccionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuestaConsultaTransaccionType">
+    <xs:sequence>
+      <xs:element name="resultado" type="xs:int"/>
+      <xs:element name="textoResultado" type="xs:string"/>
+      <xs:element minOccurs="0" name="transaccion" type="tns:wsTransaccionOnlineType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="wsTransaccionOnlineType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTransacBanco" type="xs:long"/>
+      <xs:element name="tipo" type="xs:string"/>
+      <xs:element name="bancoEmisor" type="xs:string"/>
+      <xs:element name="bancoReceptor" type="xs:string"/>
+      <xs:element name="referencia" type="xs:string"/>
+      <xs:element name="moneda" type="xs:string"/>
+      <xs:element name="importe" type="xs:decimal"/>
+      <xs:element name="codigoConcepto" type="xs:string"/>
+      <xs:element name="cuentaOrigen" type="xs:string"/>
+      <xs:element name="nombreOrigen" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionOrigen" type="xs:string"/>
+      <xs:element name="cuentaDestino" type="xs:string"/>
+      <xs:element name="nombreDestino" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccionDestino" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaCierreDebito" type="xs:string"/>
+      <xs:element minOccurs="0" name="observaciones" type="xs:string"/>
+      <xs:element minOccurs="0" name="mur" type="xs:string"/>
+      <xs:element minOccurs="0" name="idServicioDebito" type="xs:string"/>
+      <xs:element minOccurs="0" name="ordenanteDebito" type="xs:string"/>
+      <xs:element name="fechaEmision" type="xs:string"/>
+      <xs:element name="infoAdicional">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string"/>
+                  <xs:element minOccurs="0" name="value" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingresoTransaccion">
+    <xs:sequence>
+      <xs:element name="codigoInstitucionUsuario" type="xs:string"/>
+      <xs:element name="usuario" type="xs:string"/>
+      <xs:element name="password" type="xs:string"/>
+      <xs:element name="transacOnline" type="tns:wsTransaccionOnlineType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingresoTransaccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respuestaIngresoTransaccionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuestaIngresoTransaccionType">
+    <xs:sequence>
+      <xs:element name="resultado" type="xs:int"/>
+      <xs:element name="textoResultado" type="xs:string"/>
+      <xs:element minOccurs="0" name="idTransacBanco" type="xs:long"/>
+      <xs:element minOccurs="0" name="codEstadoTransac" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionCodigoEstado" type="xs:string"/>
+      <xs:element minOccurs="0" name="codSubestadoTransac" type="xs:string"/>
+      <xs:element minOccurs="0" name="descripcionCodigoSubestado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reversaTransaccion">
+    <xs:sequence>
+      <xs:element name="codigoInstitucionUsuario" type="xs:string"/>
+      <xs:element name="usuario" type="xs:string"/>
+      <xs:element name="password" type="xs:string"/>
+      <xs:element name="transacOnline" type="tns:wsTransaccionOnlineType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reversaTransaccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respuestaReversaTransaccionType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuestaReversaTransaccionType">
+    <xs:sequence>
+      <xs:element name="resultado" type="xs:int"/>
+      <xs:element name="textoResultado" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint></con:endpoints><con:operation id="5d991200-d410-4916-a02e-10a31f8d0467" isOneWay="false" action="" name="consultaTransaccion" bindingOperationName="consultaTransaccion" type="Request-Response" outputName="consultaTransaccionResponse" inputName="consultaTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47a12505-2701-40c6-ab37-699835e760e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wst:consultaTransaccion>\r
+         <codigoInstitucionUsuario>?</codigoInstitucionUsuario>\r
+         <usuario>?</usuario>\r
+         <password>?</password>\r
+         <bancoEmisor>?</bancoEmisor>\r
+         <fechaEmision>?</fechaEmision>\r
+         <referencia>?</referencia>\r
+      </wst:consultaTransaccion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/consultaTransaccion"/></con:call></con:operation><con:operation id="8096d49f-b5b4-480c-a6e9-fe587b17efb9" isOneWay="false" action="" name="ingresoTransaccion" bindingOperationName="ingresoTransaccion" type="Request-Response" outputName="ingresoTransaccionResponse" inputName="ingresoTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="08a67dd2-9058-436e-94de-946f2f762b1c" name="Request 1" outgoingWss="wsout"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wst:ingresoTransaccion>
+        <codigoInstitucionUsuario>ITAUUYMM</codigoInstitucionUsuario>
+         <usuario>pruebasbevsa</usuario>
+         <password>C82F152A98218CDD846E436F8A319D8E</password>
+         <transacOnline>
+            <tipo>C</tipo>
+            <bancoEmisor>ITAUUYMM</bancoEmisor>
+            <bancoReceptor>CITIUYMM</bancoReceptor>
+            <referencia>TC0504-IPUY-UYU</referencia>
+            <moneda>UYU</moneda>
+            <importe>600</importe>
+            <codigoConcepto>TDD</codigoConcepto>
+            <cuentaOrigen>5595180</cuentaOrigen>
+            <nombreOrigen>CUBA</nombreOrigen>
+		  <direccionOrigen>TC0504-IPUY-UYU</direccionOrigen>   
+		  <observaciones>TEXT 12345678910111</observaciones>         
+            <direccionDestino>TC0504-IPUY-UYU</direccionDestino>            
+            <cuentaDestino>61224009</cuentaDestino>
+            <nombreDestino>TC0504-IPUY-UYU</nombreDestino>
+            <fechaEmision>20210305203300</fechaEmision>
+            <infoAdicional>
+               </infoAdicional>
+         </transacOnline>
+      </wst:ingresoTransaccion>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/ingresoTransaccion"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="37b235ab-e7df-462d-98b9-48edc33e968a" isOneWay="false" action="" name="reversaTransaccion" bindingOperationName="reversaTransaccion" type="Request-Response" outputName="reversaTransaccionResponse" inputName="reversaTransaccion" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="48f6d485-5f33-45a8-b952-b5231968ed3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wst:reversaTransaccion>\r
+         <codigoInstitucionUsuario>?</codigoInstitucionUsuario>\r
+         <usuario>?</usuario>\r
+         <password>?</password>\r
+         <transacOnline>\r
+            <!--Optional:-->\r
+            <idTransacBanco>?</idTransacBanco>\r
+            <tipo>?</tipo>\r
+            <bancoEmisor>?</bancoEmisor>\r
+            <bancoReceptor>?</bancoReceptor>\r
+            <referencia>?</referencia>\r
+            <moneda>?</moneda>\r
+            <importe>?</importe>\r
+            <codigoConcepto>?</codigoConcepto>\r
+            <cuentaOrigen>?</cuentaOrigen>\r
+            <nombreOrigen>?</nombreOrigen>\r
+            <!--Optional:-->\r
+            <direccionOrigen>?</direccionOrigen>\r
+            <cuentaDestino>?</cuentaDestino>\r
+            <nombreDestino>?</nombreDestino>\r
+            <!--Optional:-->\r
+            <direccionDestino>?</direccionDestino>\r
+            <!--Optional:-->\r
+            <fechaCierreDebito>?</fechaCierreDebito>\r
+            <!--Optional:-->\r
+            <observaciones>?</observaciones>\r
+            <!--Optional:-->\r
+            <mur>?</mur>\r
+            <!--Optional:-->\r
+            <idServicioDebito>?</idServicioDebito>\r
+            <!--Optional:-->\r
+            <ordenanteDebito>?</ordenanteDebito>\r
+            <fechaEmision>?</fechaEmision>\r
+            <infoAdicional>\r
+               <!--Zero or more repetitions:-->\r
+               <entry>\r
+                  <!--Optional:-->\r
+                  <key>?</key>\r
+                  <!--Optional:-->\r
+                  <value>?</value>\r
+               </entry>\r
+            </infoAdicional>\r
+         </transacOnline>\r
+      </wst:reversaTransaccion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://objetos/wsTransaccionOnlineEmisor/WsTransaccionOnlineEmisor/reversaTransaccion"/></con:call></con:operation></con:interface><con:testSuite id="8883c4d6-d9ce-4540-86ea-df5492ca8a7a" name="CargaMasiva"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1ba325a0-d3e9-451e-8247-8126278d2dc2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ingreso_spiol_rafaga" searchProperties="true"><con:settings/><con:testStep type="groovy" name="fecha_emision" id="9997449e-90de-40d2-b250-860df523c356"><con:settings/><con:config><script>import java.util.Random
+import java.util.Date
+
+Random random = new Random()
+def min = 1
+def max = 100
+def randomValue = random.nextInt(max + 1 - min) + min;
+
+def aleatorioref = random.nextInt(789 + 1 - 1) + 1; /*genero un numero aleatorio para agregar a la referencia*/
+
+String start = new Date().format("yyyy-MM-dd'T'HH:mm:ss.SSS")
+String fecha_emision = new Date().format("yyyyMMddHHmmss")
+
+def lista_cuentas_destino = ['0061114629','USD']
+def lista_monedas = ['USD','UYU']
+def lista_nombre_destino = ['Enrique','Serra']
+
+def randomInt = random.nextInt(lista_cuentas_destino.size())
+
+def props = testRunner.testCase.getTestStepByName("Properties")
+def propsresponse = testRunner.testCase.getTestStepByName("Response")
+
+if(props.hasProperty("fechaemision")){
+	props.setPropertyValue("fechaemision", fecha_emision)
+}
+
+if(propsresponse.hasProperty("timestampinicio")){
+	propsresponse.setPropertyValue("timestampinicio", String.valueOf(start) )
+}
+
+if(props.hasProperty("cuentadestino")){
+	props.setPropertyValue("cuentadestino", String.valueOf(lista_cuentas_destino[randomInt]) )
+}
+
+if(props.hasProperty("nombreDestino")){
+	props.setPropertyValue("nombreDestino", String.valueOf(lista_nombre_destino[randomInt]) )
+}
+
+if(props.hasProperty("moneda")){
+	props.setPropertyValue("moneda", String.valueOf(lista_monedas[randomInt]) )
+}
+
+if(props.hasProperty("referencia")){
+	props.setPropertyValue("referencia", 'REF' + fecha_emision + '_' + String.valueOf(aleatorioref))
+	propsresponse.setPropertyValue("referencia", 'REF' + 'REF' + fecha_emision + '_' + String.valueOf(aleatorioref))
+}
+
+if(String.valueOf(lista_monedas[randomInt]) == "UYU"){
+	if(props.hasProperty("importe")){
+		props.setPropertyValue("importe", String.valueOf((random.nextInt(22000+1))/10.00))
+	}
+}
+
+if(String.valueOf(lista_monedas[randomInt]) == "USD"){
+	if(props.hasProperty("importe")){
+		props.setPropertyValue("importe", String.valueOf(random.nextInt(500+1)/10.00))
+	}
+}</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="b09aafe6-203f-450f-8aaa-7132a4c62eae"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>fechaemision</con:name><con:value>20210308101352</con:value></con:property><con:property><con:name>cuentadestino</con:name><con:value>0061114629</con:value></con:property><con:property><con:name>importe</con:name><con:value>19.5</con:value></con:property><con:property><con:name>bancoReceptor</con:name><con:value>BBVAUYMM</con:value></con:property><con:property><con:name>nombreDestino</con:name><con:value>Enrique</con:value></con:property><con:property><con:name>moneda</con:name><con:value>USD</con:value></con:property><con:property><con:name>referencia</con:name><con:value>REF20210308101352_649</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="d84c598f-6fd7-497d-857b-2ecec7896a6e"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>fechaemision</con:name><con:sourceType>fechaemision</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>SOAP Request</con:targetStep><con:targetPath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccion/transacOnline/fechaEmision</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>cuentadestino</con:name><con:sourceType>cuentadestino</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>SOAP Request</con:targetStep><con:targetPath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccion/transacOnline/cuentaDestino</con:targetPath><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>bancoReceptor</con:name><con:sourceType>bancoReceptor</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>SOAP Request</con:targetStep><con:targetPath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccion/transacOnline/bancoReceptor</con:targetPath><con:type>XPATH</con:type><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>importe</con:name><con:sourceType>importe</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>SOAP Request</con:targetStep><con:targetPath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccion/transacOnline/importe</con:targetPath><con:type>XPATH</con:type><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>referencia</con:name><con:sourceType>referencia</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath/><con:targetType>Request</con:targetType><con:targetStep>SOAP Request</con:targetStep><con:targetPath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccion/transacOnline/referencia</con:targetPath><con:type>XPATH</con:type><con:targetTransferType>XPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="SOAP Request" id="5b7dbad2-083c-4417-98f1-ffa6d91debb8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WsTransaccionOnlineEmisorSoapBinding</con:interface><con:operation>ingresoTransaccion</con:operation><con:request name="SOAP Request" id="0015d02a-78ad-4f05-8f21-b209645333ba" outgoingWss="wsout"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://spionline.urutec.com.uy:8443/wsTransaccionOnlineEmisor/services/WsTransaccionOnlineEmisorPort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wst="http://objetos/wsTransaccionOnlineEmisor">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wst:ingresoTransaccion>20210305205418<codigoInstitucionUsuario>ITAUUYMM</codigoInstitucionUsuario>
+         <usuario>pruebasbevsa</usuario>
+         <password>C82F152A98218CDD846E436F8A319D8E</password>
+         <transacOnline>20210305205418<tipo>C</tipo>
+            <bancoEmisor>ITAUUYMM</bancoEmisor>
+            <bancoReceptor>BBVAUYMM</bancoReceptor>
+            <referencia>REF20210308100942</referencia>
+            <moneda>UYU</moneda>
+            <importe>613.8</importe>
+            <codigoConcepto>TDD</codigoConcepto>
+            <cuentaOrigen>5595180</cuentaOrigen>
+            <nombreOrigen>NOMBRE APELLIDO TEST</nombreOrigen>
+		  <direccionOrigen>DIRECCION SU HOGAR 1235</direccionOrigen>   
+		  <observaciones>TEXT 12345678910111</observaciones>         
+            <direccionDestino>TC0504-IPUY-UYU</direccionDestino>            
+            <cuentaDestino>USD</cuentaDestino>
+            <nombreDestino>TC0504-IPUY-UYU</nombreDestino>
+            <fechaEmision>20210308100942</fechaEmision>
+            <infoAdicional>
+               </infoAdicional>
+         </transacOnline>
+      </wst:ingresoTransaccion>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1f4e8c9a-1c52-49af-b225-1a399e7afbd8"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer_response" id="a3d6525a-a049-4222-abf5-a744a4929616"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>resultado</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/resultado</con:sourcePath><con:targetType>resultado</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>textoResultado</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/textoResultado</con:sourcePath><con:targetType>textoResultado</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>idTransacBanco</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/idTransacBanco</con:sourcePath><con:targetType>idTransacBanco</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>codEstadoTransac</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/codEstadoTransac</con:sourcePath><con:targetType>codSubestadoTransac</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>descripcionCodigoEstado</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/descripcionCodigoEstado</con:sourcePath><con:targetType>descripcionCodigoEstado</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>codSubestadoTransac</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/codSubestadoTransac</con:sourcePath><con:targetType>codSubestadoTransac</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>descripcionCodigoSubestado</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>SOAP Request</con:sourceStep><con:sourcePath>declare namespace sam='http://objetos/wsTransaccionOnlineEmisor';
+//sam:ingresoTransaccionResponse/return/descripcionCodigoSubestado</con:sourcePath><con:targetType>descripcionCodigoSubestado</con:targetType><con:targetStep>Response</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Response" id="e92ceee8-d62f-42c4-8816-8635d5fff010"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>timestampinicio</con:name><con:value>2021-03-08T10:13:52.064</con:value></con:property><con:property><con:name>resultado</con:name><con:value>0</con:value></con:property><con:property><con:name>textoResultado</con:name><con:value>OK</con:value></con:property><con:property><con:name>codEstadoTransac</con:name><con:value/></con:property><con:property><con:name>descripcionCodigoEstado</con:name><con:value>Acreditada</con:value></con:property><con:property><con:name>codSubestadoTransac</con:name><con:value>000</con:value></con:property><con:property><con:name>descripcionCodigoSubestado</con:name><con:value>No hay informacion adicional.</con:value></con:property><con:property><con:name>idTransacBanco</con:name><con:value>2779241</con:value></con:property><con:property><con:name>referencia</con:name><con:value>REFREF20210308101352_649</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="log_salida" id="b508ebdf-4fbe-437a-9370-5b58416e51a3"><con:settings/><con:config><script>import java.util.Date
+import groovy.time.*
+
+def myOutFile = "C:/Temp/spiol_test1.txt"
+def file = new File(myOutFile)
+
+def props = testRunner.testCase.getTestStepByName("Response")
+if(props.hasProperty("resultado")){
+//	log.info 'Ok'
+}
+
+def _startTime = props.getPropertyValue("timestampinicio")
+def _resultado = props.getPropertyValue("resultado")
+def _textoResultado = props.getPropertyValue("textoResultado")
+def _codEstadoTransac = props.getPropertyValue("codEstadoTransac")
+def _descripcionCodigoEstado = props.getPropertyValue("descripcionCodigoEstado")
+def _codSubestadoTransac = props.getPropertyValue("codSubestadoTransac")
+def _descripcionCodigoSubestado = props.getPropertyValue("descripcionCodigoSubestado")
+def _idTransacBanco = props.getPropertyValue("idTransacBanco")
+def _referencia = props.getPropertyValue("referencia")
+
+String endTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss.SSS")
+
+def format = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+i = Date.parse(format, _startTime)
+f = Date.parse(format, endTime)
+TimeDuration duration = TimeCategory.minus(f, i)
+
+log.info duration
+
+retorno  = _startTime + ";" + endTime + ";" + _idTransacBanco + ";" + _referencia + ";" + _resultado + ";" +  _textoResultado +";"+  duration + "\n"
+
+/*if(_resultado != '500')
+	retorno = _startTime + ";" + endTime + ";" + _cuenta + ";" + _resultado + ";" + _descripcion + ";" + _nota + ";" + _listamonedas + ";" + _nombre + " ... "  + duration +  "\n"
+else
+	retorno = _startTime + ";" + endTime + ";" + _cuenta + ";" + _resultado + ";" + _descripcion + ";" + _nota + ";" + " " + ";" + " " + " ... "  + duration + "\n"
+*/
+/*log.warn retorno*/
+
+file.append(retorno, "UTF-8")</script></con:config></con:testStep><con:loadTest id="20349693-0976-425c-9b5c-a8381ec63f20" name="LoadTest 1"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>300</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>0</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer><con:crypto><con:source>C:/Aplicaciones/ProyectosSOAPUI/Certificados/transferencia en linea/prueba_emisor.p12</con:source><con:password>prueba</con:password><con:type>KEYSTORE</con:type></con:crypto><con:outgoing><con:name>wsout</con:name><con:entry type="Signature" username="prueba_emisor" password="prueba"><con:configuration><crypto>prueba_emisor.p12</crypto><keyIdentifierType>3</keyIdentifierType><signatureAlgorithm>http://www.w3.org/2000/09/xmldsig#rsa-sha1</signatureAlgorithm><signatureCanonicalization/><useSingleCert>false</useSingleCert><prependSignature>true</prependSignature><digestAlgorithm>http://www.w3.org/2001/04/xmlenc#sha256</digestAlgorithm><customTokenValueType/><customTokenId/></con:configuration></con:entry></con:outgoing></con:wssContainer><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
